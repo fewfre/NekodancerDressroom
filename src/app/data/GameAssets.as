@@ -34,19 +34,20 @@ package app.data
 		public static function init() : void {
 			var i:int, lc:Class, type:String;
 			
-
-			//ChapeauDessus3,s_ChapeauDessous3
 			// head = _setupCostumeArray({ base:"$EN_5", type:ITEM.HEAD, pad:3 });
 			// head = head.concat(_setupCostumeArray({ base:"$EN_3", type:ITEM.HEAD, pad:3, idPrefix:"z" }));
 			i = 0; type = ITEM.HEAD;
 			head = [
-				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3000"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_3001"), s_ChapeauDessous3:_getLC("$EN_3002") } }),
-				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3003"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_3004"), s_ChapeauDessous3:_getLC("$EN_3005") } }),
-				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3006"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_3007"), s_ChapeauDessous3:_getLC("$EN_3008") } }),
+				// 3000 range items use "s_ChapeauDessus" which specifies the item goes over the ears on side view
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3000"), classMap:{ s_ChapeauDessus1:lc, s_ChapeauDessus2:_getLC("$EN_3001"), s_ChapeauDessus3:_getLC("$EN_3002") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3003"), classMap:{ s_ChapeauDessus1:lc, s_ChapeauDessus2:_getLC("$EN_3004"), s_ChapeauDessus3:_getLC("$EN_3005") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3006"), classMap:{ s_ChapeauDessus1:lc, s_ChapeauDessus2:_getLC("$EN_3007"), s_ChapeauDessus3:_getLC("$EN_3008") } }),
+				// 5000 range items use "s_ChapeauDessous" which specifies the item goes under the ears on side view
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5000"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5001"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5002"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_5003"), s_ChapeauDessous3:_getLC("$EN_5004") } }),
-				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5005"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_5006"), s_ChapeauDessous3:_getLC("$EN_5007") } }),
+				// NOTE: This one uses "Ta" instead of "s_ChapeauDessous1" as this item appears under the ears ALWAYS
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5005"), classMap:{ Ta:lc, s_ChapeauDessous2:_getLC("$EN_5007"), s_ChapeauDessous3:_getLC("$EN_5006") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5008"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
 			];
 			// eyes = _setupCostumeArray({ base:"$EN_1", type:ITEM.EYES, pad:3 });
@@ -93,7 +94,8 @@ package app.data
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_34"), classMap:{ B:lc, JS:_getLC("$EN_35"), JI:_getLC("$EN_36") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_37"), classMap:{ B:lc, JS:_getLC("$EN_38"), JI:null } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_39"), classMap:{ B:lc, JS:_getLC("$EN_40"), JI:_getLC("$EN_41") } }),
-				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_6000"), classMap:{ B:lc, JS:null, JI:null } }),
+				// Skirt is a special type of pants, having not only it's own ID type but own slot
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_6000"), classMap:{ s_Jupe:lc, JS:null, JI:null } }),
 				new ItemData({ id:"inv", type:type, itemClass:MovieClip }),
 			];
 			defaultPantsIndex = 0;
@@ -109,7 +111,7 @@ package app.data
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2003"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2004"), s_Lunettes3:_getLC("$EN_2005") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2006"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2007"), s_Lunettes3:_getLC("$EN_2008") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2009"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2010"), s_Lunettes3:_getLC("$EN_2011") } }),
-				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2012"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2013"), s_Lunettes3:_getLC("$EN_2014") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2012"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2014"), s_Lunettes3:_getLC("$EN_2013") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2015"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2016"), s_Lunettes3:_getLC("$EN_2017") } })
 			];
 
@@ -119,7 +121,7 @@ package app.data
 					skins.push( new SkinData({ id:i }) );
 				}
 			}
-			defaultSkinIndex = 0;//FewfUtils.getIndexFromArrayWithKeyVal(skins, "id", ConstantsApp.DEFAULT_SKIN_ID);
+			defaultSkinIndex = 2;//FewfUtils.getIndexFromArrayWithKeyVal(skins, "id", ConstantsApp.DEFAULT_SKIN_ID);
 
 			poses = [];
 			for(i = 0; i <= 10; i++) {
@@ -358,8 +360,8 @@ package app.data
 			var tPoseData = pData.pose ? pData.pose : poses[defaultPoseIndex];
 			var tSkinData = pData.skin ? pData.skin : skins[defaultSkinIndex];
 			var tEyesData = pData.eyes ? pData.eyes : eyes[defaultEyesIndex];
-			var tShirtData = pData.shirt ? pData.shirt : eyes[defaultShirtIndex];
-			var tPantsData = pData.pants ? pData.pants : eyes[defaultPantsIndex];
+			var tShirtData = pData.shirt ? pData.shirt : shirts[defaultShirtIndex];
+			var tPantsData = pData.pants ? pData.pants : pants[defaultPantsIndex];
 
 			var tPose = new Pose(tPoseData);
 			// if(tSkinData.gender == GENDER.MALE) {

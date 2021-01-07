@@ -237,6 +237,9 @@ package app.world
 				}
 
 				shopItemButton = new PushButton({ width:grid.radius, height:grid.radius, obj:shopItem, id:i, data:{ type:tType, id:i, data:pItemArray[i], index:pPane.buttons.length } });
+				if(tType == ITEM.SKIN) {
+					shopItemButton.Image.x += 4;
+				}
 				pPane.buttons.push(shopItemButton);
 				grid.add(shopItemButton)
 				shopItemButton.addEventListener(PushButton.STATE_CHANGED_AFTER, _onItemToggled);
