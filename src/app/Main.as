@@ -43,7 +43,7 @@ package app
 		
 		private function _onPreloadComplete() : void {
 			_config = Fewf.assets.getData("config");
-			_defaultLang = _getDefaultLang(_config.languages.default);
+			_defaultLang = _getDefaultLang(_config.languages["default"]);
 			
 			_startInitialLoad();
 		}
