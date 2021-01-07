@@ -12,13 +12,11 @@ package app.data
 		/****************************
 		* General
 		*****************************/
-		public static const VERSION					: String = "0.1-alpha";
+		public static const VERSION					: String = "1.0";
 		public static const SOURCE_URL				: String = "https://github.com/fewfre/NekodancerDressroom";
 
 		public static const DEFAULT_SKIN_ID			: int = 0;
 		public static const DEFAULT_POSE_ID			: int = 0;
-
-		public static const NUM_ITEMS_PER_ROW		: int = 7;
 
 		public static const ITEM_SAVE_SCALE			: int = 8; // Power of two is probably best
 

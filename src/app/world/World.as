@@ -27,6 +27,8 @@ package app.world
 	import app.ui.panes.ColorFinderPane;
 	import app.ui.panes.ConfigTabPane;
 	import flash.display.MovieClip;
+	import app.data.ITEM;
+	import app.data.GameAssets;
 	
 	public class World extends MovieClip
 	{
@@ -73,8 +75,11 @@ package app.world
 			} catch (error:Error) { };
 
 			this.character = addChild(new Character({ x:180, y:375,
+				eyes:GameAssets.eyes[GameAssets.defaultEyesIndex],
 				skin:GameAssets.skins[GameAssets.defaultSkinIndex],
 				pose:GameAssets.poses[GameAssets.defaultPoseIndex],
+				shirt:GameAssets.shirts[0],
+				pants:GameAssets.pants[0],
 				params:parms,
 				scale:2.5
 			})) as Character;
@@ -89,7 +94,7 @@ package app.world
 			this.shopTabs = addChild(new ShopTabContainer({ x:380, y:10, width:60, height:ConstantsApp.APP_HEIGHT,
 				tabs:[
 					// { text:"tab_config", event:CONFIG_PANE_ID },
-					// { text:"tab_skins", event:ITEM.SKIN },
+					{ text:"tab_furs", event:ITEM.SKIN },
 					{ text:"tab_head", event:ITEM.HEAD },
 					{ text:"tab_eyes", event:ITEM.EYES },
 					{ text:"tab_shirts", event:ITEM.SHIRT },
@@ -149,7 +154,7 @@ package app.world
 
 
 			// Create the panes
-			var tTypes = [ /*ITEM.SKIN,*/ ITEM.HEAD, ITEM.EYES, ITEM.SHIRT, ITEM.PANTS, ITEM.SHOES, ITEM.GLASSES, ITEM.POSE ], tData:ItemData, tType:String;
+			var tTypes = [ ITEM.SKIN, ITEM.HEAD, ITEM.EYES, ITEM.SHIRT, ITEM.PANTS, ITEM.SHOES, ITEM.GLASSES, ITEM.POSE ], tData:ItemData, tType:String;
 			for(var i:int = 0; i < tTypes.length; i++) { tType = tTypes[i];
 				tPane = _paneManager.addPane(tType, _setupPane(tType));
 				// Based on what the character is wearing at start, toggle on the appropriate buttons.
@@ -208,12 +213,12 @@ package app.world
 		private function _setupPaneButtons(pPane:TabPane, pItemArray:Array) : void {
 			var tType:String = pItemArray[0].type;
 
-			var buttonPerRow = 6;
+			var buttonPerRow = 4;
 			var scale = 1;
-			if(tType == ITEM.SKIN || tType == ITEM.POSE) {
-					buttonPerRow = 4;
-					scale = 0.8;
-			}
+			// if(tType == ITEM.SKIN || tType == ITEM.POSE) {
+			// 		buttonPerRow = 4;
+			// 		scale = 0.8;
+			// }
 
 			var grid:Grid = pPane.grid;
 			if(!grid) { grid = pPane.addGrid( new Grid({ x:15, y:5, width:385, columns:buttonPerRow, margin:5 }) ); }
@@ -224,9 +229,8 @@ package app.world
 			var i = -1;
 			pPane.buttons = [];
 			while (i < pItemArray.length-1) { i++;
-				// if(pItemArray[i].sex != GameAssets.sex && pItemArray[i].sex != null) { continue; }
-				if(tType == ITEM.SKIN && i == pItemArray.length-1) {
-					shopItem = new TextBase({ size:15, color:0xC2C2DA, text:"skin_invisible" });
+				if((tType == ITEM.EYES) && i == pItemArray.length-1) {
+					shopItem = new TextBase({ size:15, color:0xC2C2DA, text:"btn_invisible" });
 				} else {
 					shopItem = GameAssets.getItemImage(pItemArray[i]);
 					shopItem.scaleX = shopItem.scaleY = scale;
@@ -299,8 +303,13 @@ package app.world
 			if(tTabPane.infoBar.hasData == false) { return; }
 
 			// If item has a default value, toggle it on. otherwise remove item.
-			if(pType == ITEM.SKIN || pType == ITEM.POSE) {
-				var tDefaultIndex = 0;//(pType == ITEM.POSE ? costumes.defaultPoseIndex : costumes.defaultSkinIndex);
+			if(pType == ITEM.SKIN || pType == ITEM.POSE || pType == ITEM.EYES) {
+				var tDefaultIndex = 0;
+				switch(pType) {
+					case ITEM.POSE: GameAssets.defaultPoseIndex;
+					case ITEM.SKIN: GameAssets.defaultSkinIndex;
+					case ITEM.EYES: GameAssets.defaultEyesIndex;
+				}
 				tTabPane.buttons[tDefaultIndex].toggleOn();
 			} else {
 				this.character.removeItem(pType);
@@ -322,7 +331,7 @@ package app.world
 
 		private function _randomItemOfType(pType:String) : void {
 			var tButtons = getButtonArrayByType(pType);
-			var tLength = tButtons.length; if(pType == ITEM.SKIN) { /* Don't select "transparent" */ tLength--; }
+			var tLength = tButtons.length; if(pType == ITEM.EYES) { /* Don't select "transparent" */ tLength--; }
 			tButtons[ Math.floor(Math.random() * tLength) ].toggleOn();
 		}
 

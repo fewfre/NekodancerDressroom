@@ -20,25 +20,23 @@
 		"share_link_copied":	{ "text":"Link copied to clipboard! Paste to use." },
 		"share_copy":			{ "text":"copy" },
 		
+		"share_paste":			{ "text":"Paste your share code / url here" },
+		"share_paste_success":	{ "text":"Success!" },
+		"share_paste_invalid":	{ "text":"Invalid" },
+		
 		"btn_color_defaults":	{ "text":"Defaults" },
 		
 		"infobar_id":			{ "text":"ID: {0}" },
 		
-		"btn_normal_mode":		{ "text":"Normal" },
-		"btn_hard_mode":		{ "text":"Hard" },
-		"btn_divine_mode":		{ "text":"Divine" },
-		
-		"tab_head":				{ "text":"Head" },
-		"tab_hair":				{ "text":"Hair" },
-		"tab_ears":				{ "text":"Ears" },
-		"tab_eyes":				{ "text":"Eyes" },
-		"tab_mouth":			{ "text":"Mouth" },
-		"tab_neck":				{ "text":"Neck" },
-		"tab_tail":				{ "text":"Tail" },
-		"tab_contacts":			{ "text":"Contacts" },
-		"tab_hand":				{ "text":"Hand" },
 		"tab_furs":				{ "text":"Furs" },
+		"tab_head":				{ "text":"Head" },
+		"tab_eyes":				{ "text":"Eyes" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Pants" },
+		"tab_shoes":			{ "text":"Shoes" },
+		"tab_glasses":			{ "text":"Glasses" },
 		"tab_poses":			{ "text":"Pose" },
-		"tab_other":			{ "text":"Other" }
+		
+		"btn_invisible":		{ "text":"Invisible" }
 	}
 }

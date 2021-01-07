@@ -22,7 +22,16 @@ package app
 		// Constructor
 		public function Main() {
 			super();
-			Fewf.init(stage);
+			
+			if (stage) {
+				this._start();
+			} else {
+				addEventListener(Event.ADDED_TO_STAGE, this._start);
+			}
+		}
+		
+		private function _start(...args:*) {
+			Fewf.init(stage, this.loaderInfo.parameters.swfUrlBase);
 
 			stage.align = StageAlign.TOP;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
@@ -37,7 +46,7 @@ package app
 		
 		private function _startPreload() : void {
 			_load([
-				"resources/config.json",
+				Fewf.swfUrlBase+"resources/config.json",
 			], String( new Date().getTime() ), _onPreloadComplete);
 		}
 		
@@ -50,7 +59,7 @@ package app
 		
 		private function _startInitialLoad() : void {
 			_load([
-				"resources/i18n/"+_defaultLang+".json",
+				Fewf.swfUrlBase+"resources/i18n/"+_defaultLang+".json",
 			], Fewf.assets.getData("config").cachebreaker, _onInitialLoadComplete);
 		}
 		
@@ -63,12 +72,12 @@ package app
 		// Start main load
 		private function _startLoad() : void {
 			var tPacks = [
-				["resources/interface.swf", { useCurrentDomain:true }],
-				"resources/flags.swf"
+				[Fewf.swfUrlBase+"resources/interface.swf", { useCurrentDomain:true }],
+				Fewf.swfUrlBase+"resources/flags.swf"
 			];
 			
 			var tPack = _config.packs.items;//.concat(_config.packs.parts);
-			for(var i:int = 0; i < tPack.length; i++) { tPacks.push("resources/"+tPack[i]); }
+			for(var i:int = 0; i < tPack.length; i++) { tPacks.push(Fewf.swfUrlBase+"resources/"+tPack[i]); }
 			
 			_load(tPacks, Fewf.assets.getData("config").cachebreaker, _onLoadComplete);
 		}

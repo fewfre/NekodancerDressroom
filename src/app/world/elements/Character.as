@@ -45,7 +45,7 @@ package app.world.elements
 			_itemDataMap[ITEM.GLASSES] = pData.glasses;
 			_itemDataMap[ITEM.POSE] = pData.pose;
 			
-			if(pData.params) _parseParams(pData.params);
+			if(pData.params) parseParams(pData.params);
 
 			updatePose();
 		}
@@ -70,7 +70,7 @@ package app.world.elements
 			if(animatePose) outfit.play(); else outfit.stopAtLastFrame();
 		}
 
-		private function _parseParams(pParams:URLVariables) : void {
+		public function parseParams(pParams:URLVariables) : void {
 			trace(pParams.toString());
 
 			// _setParamToType(pParams, ITEM.SKIN, "s", false);

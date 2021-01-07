@@ -9,6 +9,7 @@ package app.data
 	import flash.display.*;
 	import flash.geom.*;
 	import flash.net.*;
+	import flash.display.MovieClip;
 
 	public class GameAssets
 	{
@@ -24,23 +25,88 @@ package app.data
 		public static var skins:Array;
 		public static var poses:Array;
 
+		public static var defaultEyesIndex:int;
 		public static var defaultSkinIndex:int;
 		public static var defaultPoseIndex:int;
 
 		public static function init() : void {
-			var i:int;
-
-			head = _setupCostumeArray({ base:"$EN_5", type:ITEM.HEAD, pad:3 });
-			head = head.concat(_setupCostumeArray({ base:"$EN_3", type:ITEM.HEAD, pad:3, idPrefix:"z" }));
-			eyes = _setupCostumeArray({ base:"$EN_1", type:ITEM.EYES, pad:3 });
+			var i:int, lc:Class, type:String;
 			
-			shirts = _setupCostumeArray({ base:"$EN_4", type:ITEM.SHIRT, pad:3 });
-			pants = _setupCostumeArray({ base:"$EN_4", type:ITEM.PANTS, pad:3 });
-			shoes = _setupCostumeArray({ base:"$EN_4", type:ITEM.SHOES, pad:3 });
-			glasses = _setupCostumeArray({ base:"$EN_2", type:ITEM.GLASSES, pad:3 });
+
+			//ChapeauDessus3,s_ChapeauDessous3
+			// head = _setupCostumeArray({ base:"$EN_5", type:ITEM.HEAD, pad:3 });
+			// head = head.concat(_setupCostumeArray({ base:"$EN_3", type:ITEM.HEAD, pad:3, idPrefix:"z" }));
+			i = 0; type = ITEM.HEAD;
+			head = [
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3000"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_3001"), s_ChapeauDessous3:_getLC("$EN_3002") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3003"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_3004"), s_ChapeauDessous3:_getLC("$EN_3005") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3006"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_3007"), s_ChapeauDessous3:_getLC("$EN_3008") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5000"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5001"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5002"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_5003"), s_ChapeauDessous3:_getLC("$EN_5004") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5005"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_5006"), s_ChapeauDessous3:_getLC("$EN_5007") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5008"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
+			];
+			// eyes = _setupCostumeArray({ base:"$EN_1", type:ITEM.EYES, pad:3 });
+			i = 0; type = ITEM.EYES;
+			eyes = [
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1000"), classMap:{ Ya:lc, Yb:_getLC("$EN_1001"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1002"), classMap:{ Ya:lc, Yb:_getLC("$EN_1003"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1004"), classMap:{ Ya:lc, Yb:_getLC("$EN_1005"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1006"), classMap:{ Ya:lc, Yb:_getLC("$EN_1007"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1008"), classMap:{ Ya:lc, Yb:_getLC("$EN_1009"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1010"), classMap:{ Ya:lc, Yb:_getLC("$EN_1011"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1012"), classMap:{ Ya:lc, Yb:_getLC("$EN_1013"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1014"), classMap:{ Ya:lc, Yb:_getLC("$EN_1015"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1016"), classMap:{ Ya:lc, Yb:_getLC("$EN_1017"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1018"), classMap:{ Ya:lc, Yb:_getLC("$EN_1019"), Yc:lc } }),
+				new ItemData({ id:"inv", type:type, itemClass:MovieClip }),
+			];
+			defaultEyesIndex = 0;
+			
+			// shirts = _setupCostumeArray({ base:"$EN_4", type:ITEM.SHIRT, pad:3 });
+			i = 0; type = ITEM.SHIRT;
+			shirts = [
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1"), classMap:{ C:lc, BS:_getLC("$EN_2"), BI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5"), classMap:{ C:lc, BS:_getLC("$EN_6"), BI:_getLC("$EN_7") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_11"), classMap:{ C:lc, BS:_getLC("$EN_12"), BI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_13"), classMap:{ C:lc, BS:_getLC("$EN_14"), BI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_15"), classMap:{ C:lc, BS:_getLC("$EN_16"), BI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_17"), classMap:{ C:lc, BS:_getLC("$EN_18"), BI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_19"), classMap:{ C:lc, BS:_getLC("$EN_20"), BI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_21"), classMap:{ C:lc, BS:_getLC("$EN_22"), BI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_25"), classMap:{ C:lc, BS:_getLC("$EN_26"), BI:_getLC("$EN_27") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_28"), classMap:{ C:lc, BS:_getLC("$EN_29"), BI:_getLC("$EN_30") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_31"), classMap:{ C:lc, BS:_getLC("$EN_32"), BI:_getLC("$EN_33") } }),
+			];
+			// pants = _setupCostumeArray({ base:"$EN_4", type:ITEM.PANTS, pad:3 });
+			i = 0; type = ITEM.PANTS;
+			pants = [
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_3"), classMap:{ B:lc, JS:_getLC("$EN_4"), JI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_8"), classMap:{ B:lc, JS:_getLC("$EN_9"), JI:_getLC("$EN_10") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_23"), classMap:{ B:lc, JS:_getLC("$EN_24"), JI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_34"), classMap:{ B:lc, JS:_getLC("$EN_35"), JI:_getLC("$EN_36") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_37"), classMap:{ B:lc, JS:_getLC("$EN_38"), JI:null } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_39"), classMap:{ B:lc, JS:_getLC("$EN_40"), JI:_getLC("$EN_41") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_6000"), classMap:{ B:lc, JS:null, JI:null } }),
+			];
+			// shoes = _setupCostumeArray({ base:"$EN_4", type:ITEM.SHOES, pad:3 });
+			shoes = _loopCheckCostume({ base:"$EN_4", pad:3 }, function(i:int,pClass:Class) : ItemData {
+				return new ItemData({ id:i, type:ITEM.SHOES, itemClass:pClass, classMap:{ P:pClass } });
+			});
+			// glasses = _setupCostumeArray({ base:"$EN_2", type:ITEM.GLASSES, pad:3 });
+			i = 0; type = ITEM.GLASSES;
+			glasses = [
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2000"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2001"), s_Lunettes3:_getLC("$EN_2002") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2003"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2004"), s_Lunettes3:_getLC("$EN_2005") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2006"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2007"), s_Lunettes3:_getLC("$EN_2008") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2009"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2010"), s_Lunettes3:_getLC("$EN_2011") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2012"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2013"), s_Lunettes3:_getLC("$EN_2014") } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_2015"), classMap:{ s_Lunettes1:lc, s_Lunettes2:_getLC("$EN_2016"), s_Lunettes3:_getLC("$EN_2017") } })
+			];
 
 			skins = new Array();
-			for(i = 2; i < _MAX_COSTUMES_TO_CHECK_TO; i++) {
+			for(i = 1; i < _MAX_COSTUMES_TO_CHECK_TO; i++) {
 				if(Fewf.assets.getLoadedClass( "$Ta_"+i ) != null) {
 					skins.push( new SkinData({ id:i }) );
 				}
@@ -100,6 +166,24 @@ package app.data
 				}
 			}
 			return tArray;
+		}
+		
+		// pData = { base:String, pad:int, map:Array, itemClassToClassMap:String OR Array }
+		private static function _loopCheckCostume(pData:Object, pCallback:Function) : Array {
+			var tArray:Array = new Array(), tClass:Class, tItemData:ItemData;
+			for(var i = 0; i <= _MAX_COSTUMES_TO_CHECK_TO; i++) {
+				tClass = Fewf.assets.getLoadedClass( pData.base+(pData.pad ? zeroPad(i, pData.pad) : i) );
+				if(tClass != null) {
+					tItemData = pCallback(i, tClass);
+					if(tItemData){ tArray.push(tItemData); }
+				}
+				
+			}
+			return tArray;
+		}
+		
+		private static function _getLC(name:String) : Class {
+			return Fewf.assets.getLoadedClass(name);
 		}
 
 		public static function zeroPad(number:int, width:int):String {
@@ -248,11 +332,11 @@ package app.data
 				case ITEM.POSE:
 					tItem = getDefaultPoseSetup({ pose:pData });
 					break;
-				/*case ITEM.SHIRT:
+				case ITEM.SHIRT:
 				case ITEM.PANTS:
-				case ITEM.SHOES:
+				// case ITEM.SHOES:
 					tItem = new Pose(poses[defaultPoseIndex]).apply({ items:[ pData ], removeBlanks:true });
-					break;*/
+					break;
 				default:
 					tItem = new pData.itemClass();
 					colorDefault(tItem);
@@ -265,6 +349,7 @@ package app.data
 		public static function getDefaultPoseSetup(pData:Object) : Pose {
 			var tPoseData = pData.pose ? pData.pose : poses[defaultPoseIndex];
 			var tSkinData = pData.skin ? pData.skin : skins[defaultSkinIndex];
+			var tEyesData = pData.eyes ? pData.eyes : eyes[defaultEyesIndex];
 
 			var tPose = new Pose(tPoseData);
 			// if(tSkinData.gender == GENDER.MALE) {
@@ -277,7 +362,10 @@ package app.data
 			// 	], shamanMode:SHAMAN_MODE.OFF });
 			// }
 			tPose.apply({ items:[
-				tSkinData
+				tSkinData,
+				tEyesData,
+				shirts[0],
+				pants[0]
 			] });
 			tPose.stopAtLastFrame();
 
