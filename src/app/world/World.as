@@ -65,14 +65,14 @@ package app.world
 			* Create Character
 			*****************************/
 			var parms:flash.net.URLVariables = null;
-			try {
-				var urlPath:String = ExternalInterface.call("eval", "window.location.href");
-				if(urlPath && urlPath.indexOf("?") > 0) {
-					urlPath = urlPath.substr(urlPath.indexOf("?") + 1, urlPath.length);
-					parms = new flash.net.URLVariables();
-					parms.decode(urlPath);
-				}
-			} catch (error:Error) { };
+			// try {
+			// 	var urlPath:String = ExternalInterface.call("eval", "window.location.href");
+			// 	if(urlPath && urlPath.indexOf("?") > 0) {
+			// 		urlPath = urlPath.substr(urlPath.indexOf("?") + 1, urlPath.length);
+			// 		parms = new flash.net.URLVariables();
+			// 		parms.decode(urlPath);
+			// 	}
+			// } catch (error:Error) { };
 
 			this.character = addChild(new Character({ x:180, y:375,
 				eyes:GameAssets.eyes[GameAssets.defaultEyesIndex],
@@ -295,7 +295,7 @@ package app.world
 				this.character.setItemData(tData);
 
 				tInfoBar.addInfo( tData, GameAssets.getItemImage(tData) );
-				tInfoBar.showColorWheel(GameAssets.getNumOfCustomColors(tButton.Image as MovieClip) > 0);
+				tInfoBar.showColorWheel(tData.id != "inv" && GameAssets.getNumOfCustomColors(tButton.Image as MovieClip) > 0);
 			} else {
 				_removeItem(tType);
 			}

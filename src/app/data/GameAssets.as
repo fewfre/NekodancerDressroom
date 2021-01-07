@@ -54,8 +54,8 @@ package app.data
 			i = 0; type = ITEM.EYES;
 			eyes = [
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1000"), classMap:{ Ya:lc, Yb:_getLC("$EN_1001"), Yc:lc } }),
-				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1002"), classMap:{ Ya:lc, Yb:_getLC("$EN_1003"), Yc:lc } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1004"), classMap:{ Ya:lc, Yb:_getLC("$EN_1005"), Yc:lc } }),
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1002"), classMap:{ Ya:lc, Yb:_getLC("$EN_1003"), Yc:lc } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1006"), classMap:{ Ya:lc, Yb:_getLC("$EN_1007"), Yc:lc } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1008"), classMap:{ Ya:lc, Yb:_getLC("$EN_1009"), Yc:lc } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_1010"), classMap:{ Ya:lc, Yb:_getLC("$EN_1011"), Yc:lc } }),
