@@ -46,8 +46,8 @@ package app.data
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5000"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5001"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5002"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:_getLC("$EN_5003"), s_ChapeauDessous3:_getLC("$EN_5004") } }),
-				// NOTE: This one uses "Ta" instead of "s_ChapeauDessous1" as this item appears under the ears ALWAYS
-				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5005"), classMap:{ Ta:lc, s_ChapeauDessous2:_getLC("$EN_5007"), s_ChapeauDessous3:_getLC("$EN_5006") } }),
+				// NOTE: This one uses "s_CDD" instead of "s_ChapeauDessous1" as this item needs to appear under the ears ALWAYS
+				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5005"), classMap:{ s_CDD:lc, s_ChapeauDessous2:_getLC("$EN_5007"), s_ChapeauDessous3:_getLC("$EN_5006") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_5008"), classMap:{ s_ChapeauDessous1:lc, s_ChapeauDessous2:lc, s_ChapeauDessous3:lc } }),
 			];
 			// eyes = _setupCostumeArray({ base:"$EN_1", type:ITEM.EYES, pad:3 });

@@ -50,9 +50,9 @@ package app.ui
 			// ### Left Side Buttons ###
 			tX = -tTrayWidth*0.5 + tButtonSize*0.5 + tButtonSizeSpace;
 			
-			btn = tTray.addChild(new SpriteButton({ x:tX+tButtonXInc*tButtonsOnLeft, y:tY, width:tButtonSize, height:tButtonSize, obj_scale:0.45, obj:new $Link(), origin:0.5 }));
-			btn.addEventListener(ButtonBase.CLICK, pData.onShare);
-			tButtonsOnLeft++;
+			// btn = tTray.addChild(new SpriteButton({ x:tX+tButtonXInc*tButtonsOnLeft, y:tY, width:tButtonSize, height:tButtonSize, obj_scale:0.45, obj:new $Link(), origin:0.5 }));
+			// btn.addEventListener(ButtonBase.CLICK, pData.onShare);
+			// tButtonsOnLeft++;
 			
 			btn = imgurButton = tTray.addChild(new SpriteButton({ x:tX+tButtonXInc*tButtonsOnLeft, y:tY, width:tButtonSize, height:tButtonSize, obj_scale:0.45, obj:new $ImgurIcon(), origin:0.5 })) as SpriteButton;
 			var tCharacter = pData.character;
@@ -73,21 +73,21 @@ package app.ui
 			btn.addEventListener(ButtonBase.CLICK, pData.onRandomize);
 			tButtonOnRight++;
 			
-			animateButton = tTray.addChild(new SpriteButton({ x:tX-tButtonXInc*tButtonOnRight, y:tY, width:tButtonSize, height:tButtonSize, obj_scale:0.5, obj:new MovieClip(), origin:0.5 }));
-			animateButton.addEventListener(ButtonBase.CLICK, pData.onAnimate);
-			toggleAnimateButtonAsset(pData.character.animatePose);
-			tButtonOnRight++;
+			// animateButton = tTray.addChild(new SpriteButton({ x:tX-tButtonXInc*tButtonOnRight, y:tY, width:tButtonSize, height:tButtonSize, obj_scale:0.5, obj:new MovieClip(), origin:0.5 }));
+			// animateButton.addEventListener(ButtonBase.CLICK, pData.onAnimate);
+			// toggleAnimateButtonAsset(pData.character.animatePose);
+			// tButtonOnRight++;
 			
 			/********************
 			* Scale slider
 			*********************/
 			var tTotalButtons = tButtonsOnLeft+tButtonOnRight;
 			var tSliderWidth = tTrayWidth - tButtonXInc*(tTotalButtons) - 20;
-			// scaleSlider = tTray.addChild(new FancySlider({
-			// 	x:-tSliderWidth*0.5+(tButtonXInc*((tButtonsOnLeft-tButtonOnRight)*0.5))-1, y:tY,
-			// 	value: pData.character.outfit.scaleX*10, min:10, max:80, width:tSliderWidth
-			// }));
-			// scaleSlider.addEventListener(FancySlider.CHANGE, pData.onScale);
+			scaleSlider = tTray.addChild(new FancySlider({
+				x:-tSliderWidth*0.5+(tButtonXInc*((tButtonsOnLeft-tButtonOnRight)*0.5))-1, y:tY,
+				value: pData.character.outfit.scaleX*10, min:10, max:45, width:tSliderWidth
+			}));
+			scaleSlider.addEventListener(FancySlider.CHANGE, pData.onScale);
 			
 			pData = null;
 			
