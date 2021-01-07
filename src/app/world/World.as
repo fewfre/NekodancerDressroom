@@ -335,6 +335,7 @@ package app.world
 		}
 
 		private function _randomItemOfType(pType:String) : void {
+			if(getInfoBarByType(pType).isRefreshLocked) { return; }
 			var tButtons = getButtonArrayByType(pType);
 			var tLength = tButtons.length; if(pType == ITEM.EYES || pType == ITEM.SHIRT || pType == ITEM.PANTS) { /* Don't select "transparent" */ tLength--; }
 			tButtons[ Math.floor(Math.random() * tLength) ].toggleOn();
