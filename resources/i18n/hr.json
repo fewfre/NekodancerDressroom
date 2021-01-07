@@ -14,20 +14,15 @@
 		"version":				{ "text":"Verzija: {0}" },
 		"translated_by":		{ "text":"Preveo: Brunocarfd" },
 		
-		"btn_normal_mode":		{ "text":"Lagani" },
-		"btn_hard_mode":		{ "text":"Teški" },
-		"btn_divine_mode":		{ "text":"Božanski" },
-		"tab_head":				{ "text":"Glava" },
-		"tab_hair":				{ "text":"Kosa" },
-		"tab_ears":				{ "text":"Uši" },
-		"tab_eyes":				{ "text":"Oći" },
-		"tab_mouth":			{ "text":"Usta" },
-		"tab_neck":				{ "text":"Vrat" },
-		"tab_tail":				{ "text":"Rep" },
-		"tab_contacts":			{ "text":"Kontaktne", "scale":0.9 },
-		"tab_hand":				{ "text":"Hands" },
 		"tab_furs":				{ "text":"Krzna" },
+		"tab_head":				{ "text":"Glava" },
+		"tab_eyes":				{ "text":"Oći" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Hlaće" },
+		"tab_shoes":			{ "text":"Cipele" },
+		"tab_glasses":			{ "text":"Naočale" },
 		"tab_poses":			{ "text":"Poza" },
-		"tab_other":			{ "text":"Ostalo" }
+		
+		"btn_invisible":		{ "text":"Nevidljivo" }
 	}
 }

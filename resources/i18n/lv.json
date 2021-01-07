@@ -14,20 +14,15 @@
 		"version":				{ "text":"Versija: {0}" },
 		"translated_by":		{ "text":"Tulkoja: Marciskris" },
 		
-		"btn_normal_mode":		{ "text":"Normālais\nrežīms" },
-		"btn_hard_mode":		{ "text":"Grūtais\nrežīms" },
-		"btn_divine_mode":		{ "text":"Dievišķais\nrežīms" },
-		"tab_head":				{ "text":"Galva" },
-		"tab_hair":				{ "text":"Mati" },
-		"tab_ears":				{ "text":"Ausis" },
-		"tab_eyes":				{ "text":"Acis" },
-		"tab_mouth":			{ "text":"Mute" },
-		"tab_neck":				{ "text":"Kakls" },
-		"tab_tail":				{ "text":"Aste" },
-		"tab_contacts":			{ "text":"Kontaktlēcas", "scale":0.7 },
-		"tab_hand":				{ "text":"Ķepas" },
 		"tab_furs":				{ "text":"Kažoks" },
+		"tab_head":				{ "text":"Galva" },
+		"tab_eyes":				{ "text":"Acis" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Bikses" },
+		"tab_shoes":			{ "text":"Kurpes" },
+		"tab_glasses":			{ "text":"Brilles" },
 		"tab_poses":			{ "text":"Poza" },
-		"tab_other":			{ "text":"Citi" }
+		
+		"btn_invisible":		{ "text":"Neredzams" }
 	}
 }

@@ -14,20 +14,16 @@
 		"version":				{ "text":"Version: {0}" },
 		"translated_by":		{ "text":"Traduit par: Virus_code" },
 		
-		"btn_normal_mode":		{ "text":"Normal" },
-		"btn_hard_mode":		{ "text":"Difficile" },
-		"btn_divine_mode":		{ "text":"Divine" },
-		"tab_head":				{ "text":"Tête" },
-		"tab_hair":				{ "text":"Cheveux" },
-		"tab_ears":				{ "text":"Oreilles" },
-		"tab_eyes":				{ "text":"Yeux" },
-		"tab_mouth":			{ "text":"Bouche" },
-		"tab_neck":				{ "text":"Cou" },
-		"tab_tail":				{ "text":"Queue" },
-		"tab_contacts":			{ "text":"Lentilles" },
-		"tab_hand":				{ "text":"Mains" },
 		"tab_furs":				{ "text":"Fourrures", "scale":0.95 },
+		"tab_head":				{ "text":"Tête" },
+		"tab_eyes":				{ "text":"Yeux" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Pantalon" },
+		"tab_shoes":			{ "text":"Chauss\n-ures" },
+		"tab_glasses":			{ "text":"Lunettes" },
 		"tab_poses":			{ "text":"Pose" },
-		"tab_other":			{ "text":"Autres" }
+		
+		
+		"btn_invisible":		{ "text":"Invisible" }
 	}
 }

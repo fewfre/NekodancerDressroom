@@ -14,20 +14,15 @@
 		"version":				{ "text":"Version {0}" },
 		"translated_by":		{ "text":"Översätt av: Elinormus" },
 		
-		"btn_normal_mode":		{ "text":"Normal mode", "scale":0.9 },
-		"btn_hard_mode":		{ "text":"Svår mode" },
-		"btn_divine_mode":		{ "text":"Divine" },
-		"tab_head":				{ "text":"Huvud" },
-		"tab_hair":				{ "text":"Hår" },
-		"tab_ears":				{ "text":"Öron" },
-		"tab_eyes":				{ "text":"Ögon" },
-		"tab_mouth":			{ "text":"Mun" },
-		"tab_neck":				{ "text":"Nacke" },
-		"tab_tail":				{ "text":"Svans" },
-		"tab_contacts":			{ "text":"Linser" },
-		"tab_hand":				{ "text":"Hands" },
 		"tab_furs":				{ "text":"Pälsar" },
+		"tab_head":				{ "text":"Huvud" },
+		"tab_eyes":				{ "text":"Ögon" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Byxor" },
+		"tab_shoes":			{ "text":"Skor" },
+		"tab_glasses":			{ "text":"Glasögon" },
 		"tab_poses":			{ "text":"Positioner", "scale":0.9 },
-		"tab_other":			{ "text":"Annat" }
+		
+		"btn_invisible":		{ "text":"Osynligt" }
 	}
 }

@@ -14,20 +14,15 @@
 		"version":				{ "text":"Sürüm: {0}" },
 		"translated_by":		{ "text":"Çeviri: Honorabilis" },
 		
-		"btn_normal_mode":		{ "text":"Normal" },
-		"btn_hard_mode":		{ "text":"Zor" },
-		"btn_divine_mode":		{ "text":"Kutsal" },
-		"tab_head":				{ "text":"Baş" },
-		"tab_hair":				{ "text":"Saç Şekli" },
-		"tab_ears":				{ "text":"Kulaklar" },
-		"tab_eyes":				{ "text":"Gözler" },
-		"tab_mouth":			{ "text":"Ağız" },
-		"tab_neck":				{ "text":"Boyun" },
-		"tab_tail":				{ "text":"Kuyruk" },
-		"tab_contacts":			{ "text":"Kontakt\nLensler", "scale":0.9 },
-		"tab_hand":				{ "text":"Hands" },
 		"tab_furs":				{ "text":"Kürkler" },
+		"tab_head":				{ "text":"Baş" },
+		"tab_eyes":				{ "text":"Gözler" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Pantolon" },
+		"tab_shoes":			{ "text":"Ayakkabı" },
+		"tab_glasses":			{ "text":"Gözlük" },
 		"tab_poses":			{ "text":"Duruş" },
-		"tab_other":			{ "text":"Diğer" }
+		
+		"btn_invisible":		{ "text":"Görünmez" }
 	}
 }

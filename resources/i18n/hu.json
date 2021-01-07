@@ -14,20 +14,15 @@
 		"version":				{ "text":"Verzió: {0}" },
 		"translated_by":		{ "text":"Fordította: Fire_tiger" },
 		
-		"btn_normal_mode":		{ "text":"Normál" },
-		"btn_hard_mode":		{ "text":"Nehéz" },
-		"btn_divine_mode":		{ "text":"Felséges" },
-		"tab_head":				{ "text":"Fej" },
-		"tab_hair":				{ "text":"Haj" },
-		"tab_ears":				{ "text":"Fül" },
-		"tab_eyes":				{ "text":"Szem" },
-		"tab_mouth":			{ "text":"Száj" },
-		"tab_neck":				{ "text":"Nyak" },
-		"tab_tail":				{ "text":"Farok" },
-		"tab_contacts":			{ "text":"Lencse" },
-		"tab_hand":				{ "text":"Kéz" },
 		"tab_furs":				{ "text":"Bunda" },
+		"tab_head":				{ "text":"Fej" },
+		"tab_eyes":				{ "text":"Szem" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Nadrágok" },
+		"tab_shoes":			{ "text":"Cipők" },
+		"tab_glasses":			{ "text":"Szemüveg", "scale":0.95 },
 		"tab_poses":			{ "text":"Póz" },
-		"tab_other":			{ "text":"Egyéb" }
+		
+		"btn_invisible":		{ "text":"Láthatatlan" }
 	}
 }

@@ -14,20 +14,15 @@
 		"version":				{ "text":"Versão: {0}" },
 		"translated_by":		{ "text":"Traduzido por: Buwho" },
 		
-		"btn_normal_mode":		{ "text":"Normal" },
-		"btn_hard_mode":		{ "text":"Difícil" },
-		"btn_divine_mode":		{ "text":"Divino" },
-		"tab_head":				{ "text":"Cabeça" },
-		"tab_hair":				{ "text":"Penteado", "scale":0.95 },
-		"tab_ears":				{ "text":"Orelhas" },
-		"tab_eyes":				{ "text":"Olhos" },
-		"tab_mouth":			{ "text":"Boca" },
-		"tab_neck":				{ "text":"Pescoço" },
-		"tab_tail":				{ "text":"Rabo" },
-		"tab_contacts":			{ "text":"Lentes" },
-		"tab_hand":				{ "text":"Mãos" },
 		"tab_furs":				{ "text":"Pelos" },
+		"tab_head":				{ "text":"Cabeça" },
+		"tab_eyes":				{ "text":"Olhos" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Calças" },
+		"tab_shoes":			{ "text":"Sapatos" },
+		"tab_glasses":			{ "text":"Óculos" },
 		"tab_poses":			{ "text":"Pose" },
-		"tab_other":			{ "text":"Outros" }
+		
+		"btn_invisible":		{ "text":"Invisível" }
 	}
 }

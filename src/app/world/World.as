@@ -91,7 +91,7 @@ package app.world
 			tShop.drawSimpleGradient(ConstantsApp.COLOR_TRAY_GRADIENT, 15, ConstantsApp.COLOR_TRAY_B_1, ConstantsApp.COLOR_TRAY_B_2, ConstantsApp.COLOR_TRAY_B_3);
 			_paneManager = tShop.addChild(new PaneManager()) as PaneManager;
 			
-			this.shopTabs = addChild(new ShopTabContainer({ x:380, y:10, width:60, height:ConstantsApp.APP_HEIGHT,
+			this.shopTabs = addChild(new ShopTabContainer({ x:375, y:10, width:70, height:ConstantsApp.APP_HEIGHT,
 				tabs:[
 					// { text:"tab_config", event:CONFIG_PANE_ID },
 					{ text:"tab_furs", event:ITEM.SKIN },

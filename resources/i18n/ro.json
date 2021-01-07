@@ -14,20 +14,15 @@
 		"version":				{ "text":"Versiune: {0}" },
 		"translated_by":		{ "text":"Translated by: Sky_dreams" },
 		
-		"btn_normal_mode":		{ "text":"Normal" },
-		"btn_hard_mode":		{ "text":"Dificil" },
-		"btn_divine_mode":		{ "text":"Divin" },
-		"tab_head":				{ "text":"Cap" },
-		"tab_hair":				{ "text":"Coafură" },
-		"tab_ears":				{ "text":"Urechi" },
-		"tab_eyes":				{ "text":"Ochi" },
-		"tab_mouth":			{ "text":"Gură" },
-		"tab_neck":				{ "text":"Gât" },
-		"tab_tail":				{ "text":"Coadă" },
-		"tab_contacts":			{ "text":"Lentile" },
-		"tab_hand":				{ "text":"Mână" },
 		"tab_furs":				{ "text":"Blană" },
+		"tab_head":				{ "text":"Cap" },
+		"tab_eyes":				{ "text":"Ochi" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Pantaloni" },
+		"tab_shoes":			{ "text":"Pantofi" },
+		"tab_glasses":			{ "text":"Ochelari" },
 		"tab_poses":			{ "text":"Poziție" },
-		"tab_other":			{ "text":"Altele" }
+		
+		"btn_invisible":		{ "text":"Invizibil" }
 	}
 }

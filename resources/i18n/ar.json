@@ -14,20 +14,15 @@
 		"version":				{ "text":"الإصدار: {0}" },
 		"translated_by":		{ "text":"الترجمة من طرف: Hmiida" },
 		
-		"btn_normal_mode":		{ "text":"العادي" },
-		"btn_hard_mode":		{ "text":"الصعب" },
-		"btn_divine_mode":		{ "text":"الخارق" },
-		"tab_head":				{ "text":"الرأس" },
-		"tab_hair":				{ "text":"الشعر" },
-		"tab_ears":				{ "text":"الاذنان" },
-		"tab_eyes":				{ "text":"العينان" },
-		"tab_mouth":			{ "text":"الفم" },
-		"tab_neck":				{ "text":"العنق" },
-		"tab_tail":				{ "text":"الذيل" },
-		"tab_contacts":			{ "text":"العدسات" },
-		"tab_hand":				{ "text":"Hands" },
 		"tab_furs":				{ "text":"الفراء" },
+		"tab_head":				{ "text":"الرأس" },
+		"tab_eyes":				{ "text":"العينان" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"سروال" },
+		"tab_shoes":			{ "text":"أحذية" },
+		"tab_glasses":			{ "text":"نظارات" },
 		"tab_poses":			{ "text":"الوضعية" },
-		"tab_other":			{ "text":"آخر" }
+		
+		"btn_invisible":		{ "text":"غير مرئي" }
 	}
 }

@@ -14,20 +14,15 @@
 		"version":				{ "text":"Version: {0}" },
 		"translated_by":		{ "text":"Übersetzt von: Virus_Code" },
 		
-		"btn_normal_mode":		{ "text":"Normal" },
-		"btn_hard_mode":		{ "text":"Schwer" },
-		"btn_divine_mode":		{ "text":"Göttlich" },
-		"tab_head":				{ "text":"Kopf" },
-		"tab_hair":				{ "text":"Frisur" },
-		"tab_ears":				{ "text":"Ohren" },
-		"tab_eyes":				{ "text":"Augen" },
-		"tab_mouth":			{ "text":"Mund" },
-		"tab_neck":				{ "text":"Hals" },
-		"tab_tail":				{ "text":"Schwanz" },
-		"tab_contacts":			{ "text":"Kontaktlinsen", "scale":0.7 },
-		"tab_hand":				{ "text":"Pfoten" },
 		"tab_furs":				{ "text":"Fell" },
+		"tab_head":				{ "text":"Kopf" },
+		"tab_eyes":				{ "text":"Augen" },
+		"tab_shirts":			{ "text":"Tshirt" },
+		"tab_pants":			{ "text":"Hosen" },
+		"tab_shoes":			{ "text":"Schuhe" },
+		"tab_glasses":			{ "text":"Brille" },
 		"tab_poses":			{ "text":"Haltung" },
-		"tab_other":			{ "text":"Anderes" }
+		
+		"btn_invisible":		{ "text":"Unsichtbar" }
 	}
 }
