@@ -78,8 +78,8 @@ package app.world
 				eyes:GameAssets.eyes[GameAssets.defaultEyesIndex],
 				skin:GameAssets.skins[GameAssets.defaultSkinIndex],
 				pose:GameAssets.poses[GameAssets.defaultPoseIndex],
-				shirt:GameAssets.shirts[0],
-				pants:GameAssets.pants[0],
+				shirt:GameAssets.shirts[GameAssets.defaultShirtIndex],
+				pants:GameAssets.pants[GameAssets.defaultPantsIndex],
 				params:parms,
 				scale:2.5
 			})) as Character;
@@ -229,7 +229,7 @@ package app.world
 			var i = -1;
 			pPane.buttons = [];
 			while (i < pItemArray.length-1) { i++;
-				if((tType == ITEM.EYES) && i == pItemArray.length-1) {
+				if(pItemArray[i].id == "inv") {
 					shopItem = new TextBase({ size:15, color:0xC2C2DA, text:"btn_invisible" });
 				} else {
 					shopItem = GameAssets.getItemImage(pItemArray[i]);
@@ -303,12 +303,14 @@ package app.world
 			if(tTabPane.infoBar.hasData == false) { return; }
 
 			// If item has a default value, toggle it on. otherwise remove item.
-			if(pType == ITEM.SKIN || pType == ITEM.POSE || pType == ITEM.EYES) {
+			if(pType == ITEM.SKIN || pType == ITEM.POSE || pType == ITEM.EYES || pType == ITEM.SHIRT || pType == ITEM.PANTS) {
 				var tDefaultIndex = 0;
 				switch(pType) {
 					case ITEM.POSE: GameAssets.defaultPoseIndex;
 					case ITEM.SKIN: GameAssets.defaultSkinIndex;
 					case ITEM.EYES: GameAssets.defaultEyesIndex;
+					case ITEM.SHIRT: GameAssets.defaultShirtIndex;
+					case ITEM.PANTS: GameAssets.defaultPantsIndex;
 				}
 				tTabPane.buttons[tDefaultIndex].toggleOn();
 			} else {
@@ -331,7 +333,7 @@ package app.world
 
 		private function _randomItemOfType(pType:String) : void {
 			var tButtons = getButtonArrayByType(pType);
-			var tLength = tButtons.length; if(pType == ITEM.EYES) { /* Don't select "transparent" */ tLength--; }
+			var tLength = tButtons.length; if(pType == ITEM.EYES || pType == ITEM.SHIRT || pType == ITEM.PANTS) { /* Don't select "transparent" */ tLength--; }
 			tButtons[ Math.floor(Math.random() * tLength) ].toggleOn();
 		}
 

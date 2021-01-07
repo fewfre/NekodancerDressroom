@@ -25,9 +25,11 @@ package app.data
 		public static var skins:Array;
 		public static var poses:Array;
 
-		public static var defaultEyesIndex:int;
-		public static var defaultSkinIndex:int;
 		public static var defaultPoseIndex:int;
+		public static var defaultSkinIndex:int;
+		public static var defaultEyesIndex:int;
+		public static var defaultShirtIndex:int;
+		public static var defaultPantsIndex:int;
 
 		public static function init() : void {
 			var i:int, lc:Class, type:String;
@@ -78,7 +80,10 @@ package app.data
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_25"), classMap:{ C:lc, BS:_getLC("$EN_26"), BI:_getLC("$EN_27") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_28"), classMap:{ C:lc, BS:_getLC("$EN_29"), BI:_getLC("$EN_30") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_31"), classMap:{ C:lc, BS:_getLC("$EN_32"), BI:_getLC("$EN_33") } }),
+				new ItemData({ id:"inv", type:type, itemClass:MovieClip }),
 			];
+			defaultShirtIndex = 0;
+			
 			// pants = _setupCostumeArray({ base:"$EN_4", type:ITEM.PANTS, pad:3 });
 			i = 0; type = ITEM.PANTS;
 			pants = [
@@ -89,7 +94,10 @@ package app.data
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_37"), classMap:{ B:lc, JS:_getLC("$EN_38"), JI:null } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_39"), classMap:{ B:lc, JS:_getLC("$EN_40"), JI:_getLC("$EN_41") } }),
 				new ItemData({ id:i++, type:type, itemClass:lc=_getLC("$EN_6000"), classMap:{ B:lc, JS:null, JI:null } }),
+				new ItemData({ id:"inv", type:type, itemClass:MovieClip }),
 			];
+			defaultPantsIndex = 0;
+			
 			// shoes = _setupCostumeArray({ base:"$EN_4", type:ITEM.SHOES, pad:3 });
 			shoes = _loopCheckCostume({ base:"$EN_4", pad:3 }, function(i:int,pClass:Class) : ItemData {
 				return new ItemData({ id:i, type:ITEM.SHOES, itemClass:pClass, classMap:{ P:pClass } });
@@ -350,6 +358,8 @@ package app.data
 			var tPoseData = pData.pose ? pData.pose : poses[defaultPoseIndex];
 			var tSkinData = pData.skin ? pData.skin : skins[defaultSkinIndex];
 			var tEyesData = pData.eyes ? pData.eyes : eyes[defaultEyesIndex];
+			var tShirtData = pData.shirt ? pData.shirt : eyes[defaultShirtIndex];
+			var tPantsData = pData.pants ? pData.pants : eyes[defaultPantsIndex];
 
 			var tPose = new Pose(tPoseData);
 			// if(tSkinData.gender == GENDER.MALE) {
@@ -364,8 +374,8 @@ package app.data
 			tPose.apply({ items:[
 				tSkinData,
 				tEyesData,
-				shirts[0],
-				pants[0]
+				tShirtData,
+				tPantsData
 			] });
 			tPose.stopAtLastFrame();
 
