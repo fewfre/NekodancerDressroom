@@ -1,3 +1,8 @@
+== V1.1 - 7 October 2022 ==
+- Manually selecting a language will now cause the app to remember it the next time it is opened (request by Zelenpixel#9767)
+- Back button added when in downloadable app
+
+
 == V1.0b - 1 May 2021 ==
 - Randomize button icon changed to dice
 - Lock icon on infobar now disables randomize button to make it's purpose clearer

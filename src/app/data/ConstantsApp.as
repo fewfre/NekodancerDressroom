@@ -12,8 +12,8 @@ package app.data
 		/****************************
 		* General
 		*****************************/
-		public static const VERSION					: String = "1.0b";
-		public static const SOURCE_URL				: String = "https://github.com/fewfre/NekodancerDressroom";
+		public static const VERSION					: String = "1.1";
+		public static const SOURCE_URL				: String = "https://github.com/fewfre/NekodancerDressroom/blob/master/CHANGELOG";
 
 		public static const DEFAULT_SKIN_ID			: int = 0;
 		public static const DEFAULT_POSE_ID			: int = 0;
