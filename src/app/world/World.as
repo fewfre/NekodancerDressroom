@@ -250,12 +250,12 @@ package app.world
 		private function _onMouseWheel(pEvent:MouseEvent) : void {
 			if(this.mouseX < this.shopTabs.x) {
 				_toolbox.scaleSlider.updateViaMouseWheelDelta(pEvent.delta);
-				character.scale = _toolbox.scaleSlider.getValueAsScale();
+				character.scale = _toolbox.scaleSlider.value;
 			}
 		}
 
 		private function _onScaleSliderChange(pEvent:Event):void {
-			character.scale = _toolbox.scaleSlider.getValueAsScale();
+			character.scale = _toolbox.scaleSlider.value;
 		}
 
 		private function _onPlayerAnimationToggle(pEvent:Event):void {
